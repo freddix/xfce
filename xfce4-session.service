@@ -1,0 +1,11 @@
+
+[Unit]
+Description=Xfce4 Session Manager
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/xfce4-session
+
+[Install]
+WantedBy=xfce4.target
+

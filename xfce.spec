@@ -1,7 +1,7 @@
 Summary:	XFCE desktop
 Name:		xfce
 Version:	4.10.0
-Release:	5
+Release:	6
 License:	GPL v2
 Group:		X11/Applications
 Source0:	xfce4.target
@@ -71,10 +71,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%if 0
 %{_prefix}/lib/systemd/user/xfce4.target
 %{_prefix}/lib/systemd/user/xfce4-session.service
 %{_prefix}/lib/systemd/user/xfwm4.service
 %dir %{_prefix}/lib/systemd/user/xfce4.target.wants
 %{_prefix}/lib/systemd/user/xfce4.target.wants/xfce4-session.service
 %{_prefix}/lib/systemd/user/xfce4.target.wants/xfwm4.service
+%endif
 
